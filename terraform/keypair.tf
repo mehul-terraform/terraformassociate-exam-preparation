@@ -1,0 +1,4 @@
+resource "aws_key_pair" "project-aws-keypair" {
+  key_name   = "project-aws-keypair"
+  public_key = "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDHMKLS4G1hCI50JzH/o7Zv6v/ly2yfTiJGnkZQv+eDAnNQRmvoKr+kEiGMWuj0j/ZwjATI2Sc2HPwwebyyL7bEqi9j7LH9xP68MB06jEgpj9MCK2TVwmEreIYfZ9k1gZDLfuIFLzU028LG1E/w7IGbvH6pXtu6NVKuBmWz9ihkpQdvR17THnJyqIm4E8cfS/tI1Drji6FmNNXPGypl0Y1V0dwYk8bGYsj2B1LfQma8JYZ0H9g5IUFI3IGwTk1Y+uom2j7Nt0V0QJHzYRnH6lc2OSUzvBExYJgz8lvCtbV4lDRhaiCG+DkzGkoPaYjyeOZ77obHszHVSort5KWqZ6ur"
+}

@@ -1,1 +1,1 @@
-# terraformassociate-exam-preparation3
+# terraformassociate-exam-preparation
