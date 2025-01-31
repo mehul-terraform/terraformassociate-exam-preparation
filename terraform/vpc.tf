@@ -3,7 +3,7 @@ resource "aws_vpc" "project-aws-vpc" {
   cidr_block           = "10.0.0.0/16"
   enable_dns_hostnames = true
   tags = {
-      Name = "project-aws-vpc"
+    Name = "project-aws-vpc"
   }
 }
 
@@ -14,7 +14,7 @@ resource "aws_subnet" "project-aws-vm" {
 
   depends_on = [aws_internet_gateway.project-aws-igw]
   tags = {
-      Name = "project-aws-vm"
+    Name = "project-aws-vm"
   }
 }
 
@@ -25,7 +25,7 @@ resource "aws_subnet" "project-aws-db" {
 
   depends_on = [aws_internet_gateway.project-aws-igw]
   tags = {
-      Name = "project-aws-db"
+    Name = "project-aws-db"
   }
 }
 
@@ -36,14 +36,14 @@ resource "aws_subnet" "project-aws-apps" {
 
   depends_on = [aws_internet_gateway.project-aws-igw]
   tags = {
-      Name = "project-aws-db"
+    Name = "project-aws-db"
   }
 }
 
 resource "aws_internet_gateway" "project-aws-igw" {
   vpc_id = aws_vpc.project-aws-vpc.id
   tags = {
-      Name = "project-aws-igw"
+    Name = "project-aws-igw"
   }
 }
 
@@ -52,8 +52,8 @@ resource "aws_route_table" "project-aws-rtb" {
   tags = {
     Name = "project-aws-rtb"
   }
-  
-route {
+
+  route {
     cidr_block = "0.0.0.0/0"
     gateway_id = aws_internet_gateway.project-aws-igw.id
   }
